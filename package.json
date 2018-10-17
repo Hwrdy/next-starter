@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,17 @@
   "bugs": {
     "url": "https://github.com/Hwrdy/next-starter/issues"
   },
-  "homepage": "https://github.com/Hwrdy/next-starter#readme"
+  "homepage": "https://github.com/Hwrdy/next-starter#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "next": "^7.0.2",
+    "next-optimized-images": "^1.4.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "styled-components": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.6.4",
+    "next-compose-plugins": "^2.1.1"
+  }
 }

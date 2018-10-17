@@ -1,0 +1,13 @@
+# Project dependencies
+node_modules
+.cache/
+
+# Build directory
+public/
+.next/
+.tmp/
+.eslintcache
+.DS_Store
+.env
+yarn-error.log
+version.json
