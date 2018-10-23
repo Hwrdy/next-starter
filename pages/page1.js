@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Link from 'next/link';
 import { FormattedMessage, FormattedNumber } from 'react-intl';
 // import Head from 'next/head';
 
-class Index extends React.Component {
+class Index extends Component {
   static getInitialProps() {
+    // Do something
+    // console.log('getInit');
+  }
+
+  static getDerivedStateFromProps() {
+    // console.log('der');
+    return {};
+  }
+
+  componentDidMount() {
+    // console.log('did');
+  }
+
+  componentDidUpdate() {
+    // console.log('upd');
   }
 
   render() {

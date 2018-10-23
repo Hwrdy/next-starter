@@ -1,16 +1,26 @@
-import Document, { Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+/* eslint-disable react/no-danger */
+import React from 'react';
+import Document, { Head, Main, NextScript } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
-  static getInitialProps ({ renderPage }) {
+  static async getInitialProps(context) {
+    const { renderPage, req: { locale, localeDataScript } } = context;
+    // const props = await super.getInitialProps(context);
     const sheet = new ServerStyleSheet();
     const page = renderPage(App => props => sheet.collectStyles(<App {...props} />));
     const styleTags = sheet.getStyleElement();
 
-    return { ...page, styleTags };
+    return {
+      // ...props,
+      ...page,
+      styleTags,
+      locale,
+      localeDataScript,
+    };
   }
 
-  render () {
+  render() {
     return (
       <html>
         <Head>
@@ -18,6 +28,11 @@ export default class MyDocument extends Document {
         </Head>
         <body>
           <Main />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: this.props.localeDataScript,
+            }}
+          />
           <NextScript />
         </body>
       </html>

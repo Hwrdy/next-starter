@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Link from 'next/link';
 import { FormattedMessage, FormattedNumber } from 'react-intl';
 // import Head from 'next/head';
 
-class Index extends React.Component {
+class Page2 extends Component {
   static getInitialProps() {
+    // Do something
+    // console.log('2 getInit');
+  }
+
+  static getDerivedStateFromProps() {
+    // console.log('2 der');
+    return {};
+  }
+
+  componentDidMount() {
+    // console.log('2 did');
   }
 
   render() {
     // const { intl } = this.props
-    // console.log('ren');
 
     return (
       <div>
-        <Link href="/page2">
+        <Link href="/index">
           <a>here</a>
         </Link>
         <p>
@@ -27,4 +37,4 @@ class Index extends React.Component {
   }
 }
 
-export default Index;
+export default Page2;

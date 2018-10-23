@@ -1,0 +1,14 @@
+{
+  "parser": "babel-eslint",
+  "extends": "@cobinhood/eslint-config-cobinhood/browser",
+  "rules": {
+    "arrow-body-style": 0,
+    "import/no-extraneous-dependencies": 0,
+    "no-useless-escape": 0,
+    "max-len": 0,
+    "react/forbid-prop-types": 0,
+    "react/prefer-stateless-function": 0,
+    "strict": 0,
+    "compat/compat": 0
+  }
+}
